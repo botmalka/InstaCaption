@@ -7,16 +7,7 @@ Created on Mon Oct  3 13:32:22 2022
 from __future__ import unicode_literals
 import youtube_dl
 
-
-
-
 files = [r"https://www.youtube.com/watch?v=JrBdYmStZJ4"]
-
-# with audio as source:
-#     audio_file = r.record(source)
-
-# result = r.recognize_google(audio_file)
-# print(result)
 
 ydl_opts = {
     'format': 'bestvideo+bestaudio/best',
@@ -33,5 +24,3 @@ ydl_opts = {
 with youtube_dl.YoutubeDL(ydl_opts) as ydl:
     for file in files:
         ydl.download([file])
-
-# os.system(r'youtube-dl -x --audio-format mp3 -o -k.%(ext)s')
